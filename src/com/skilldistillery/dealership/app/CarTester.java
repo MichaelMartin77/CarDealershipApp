@@ -7,10 +7,11 @@ public class CarTester {
   public static void main(String[] args) {
     // Create two Cars and assign fields
     Car fredsCar = new Car("Kia", "Sportage", "Hot Pink", 28565);
-//    fredsCar.make = "Kia";
-//    fredsCar.model = "Sportage";
-//    fredsCar.color = "Hot Pink";
-//    fredsCar.purchasePrice = 28565;
+    // added setters as well as per instructions from part b of D 
+//    fredsCar.setMake("Kia");
+//    fredsCar.setModel("Sportage");
+//    fredsCar.setColor("Hot Pink");
+//    fredsCar.setPurchasePrice(28565);
 
     Car bernicesCar = new Car();
 
