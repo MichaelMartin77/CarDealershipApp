@@ -1,18 +1,70 @@
 package com.skilldistillery.dealership.entities;
 
 public class Car {
-   public String make;
-   public String model;
-   public String color;
-   public double purchasePrice;
+	// Change the class's fields to have private visibility
+	private String make;
+	private String model;
+	private String color;
+	private double purchasePrice;
+	
+	// Create a constructor w/ parameters for all 4 fields 
+	public Car(String make, String model, String color, double purchasePrice) {
+		this.make = make; 
+		this.model = model; 
+		this.color = color; 
+		this.purchasePrice = purchasePrice; 
+	}
+	
+	// adding a no-arg constructor
+	public Car() {
+		
+	}
+	
 
-   public String getCarData() {
-      String output = "make=" + make + ", model=" + model + ", color=" + color + ", purchasePrice=" + purchasePrice;
-      return output;
-   }
+	// Add getters and setters for the fields
+	// Getter and Setter for make
+	public String getMake() {
+		return make;
+	}
 
-   public void displayCar() {
-      String carData = getCarData();
-      System.out.println(carData);
-   }
+	public void setMake(String make) {
+		this.make = make;
+	}
+
+	// Getter and Setter for model
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	// Getter and Setter for color
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	// Getter and Setter for purchasePrice
+	public double getPurchasePrice() {
+		return purchasePrice;
+	}
+
+	public void setPurchasePrice(double purchasePrice) {
+		this.purchasePrice = purchasePrice;
+	}
+
+	public String toString() {
+		String output = "make=" + make + ", model=" + model + ", color=" + color + ", purchasePrice=" + purchasePrice;
+		return output;
+	}
+
+	public void displayCar() {
+		String carData = toString();
+		System.out.println(carData);
+	}
 }
