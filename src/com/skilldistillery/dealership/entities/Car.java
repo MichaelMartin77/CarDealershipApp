@@ -6,20 +6,21 @@ public class Car {
 	private String model;
 	private String color;
 	private double purchasePrice;
-	
-	// Create a constructor w/ parameters for all 4 fields 
+
+	// Add a ctor to initialize a car's fields
+
+	// Create a constructor w/ parameters for all 4 fields
 	public Car(String make, String model, String color, double purchasePrice) {
-		this.make = make; 
-		this.model = model; 
-		this.color = color; 
-		this.purchasePrice = purchasePrice; 
+		this.make = make;
+		this.model = model;
+		this.color = color;
+		this.purchasePrice = purchasePrice;
 	}
-	
+
 	// adding a no-arg constructor
 	public Car() {
-		
+
 	}
-	
 
 	// Add getters and setters for the fields
 	// Getter and Setter for make
@@ -58,6 +59,8 @@ public class Car {
 		this.purchasePrice = purchasePrice;
 	}
 
+	// changed the method "getCardata() to toString() b/c it is not a getter by
+	// convention
 	public String toString() {
 		String output = "make=" + make + ", model=" + model + ", color=" + color + ", purchasePrice=" + purchasePrice;
 		return output;
