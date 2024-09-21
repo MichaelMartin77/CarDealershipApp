@@ -7,9 +7,13 @@ public class CarLotTester {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		CarLotTester test = new CarLotTester();
+//		CarLotTester test = new CarLotTester();
 		
-		test.launch();
+//		test.launch();
+		
+		CarLotTester test2 = new CarLotTester();
+		
+		test2.run(); 
 	}
 	
 	public void launch() {
@@ -31,6 +35,26 @@ public class CarLotTester {
 		
 		// Calling getListOfCarsInInventory to get and display the latest inventory of parked cars
 		System.out.println(carLot.getListOfCarsInInventory());
+	}
+	
+	public void run() {
+		CarLot carLot2 = new CarLot(); 
+		
+		Car car1 = new Car("Ford", "F150", "Blue", 90_000.0);
+		Car car2 = new Car("Chevy", "Blazer", "Red", 100_000.0);
+		
+		carLot2.addCar(car1); // added car 1 
+		carLot2.addCar(car2); // added car 2
+		
+		Car purchasedCar = carLot2.purchaseCar("Ford", "F150");
+		
+		
+		
+		if (purchasedCar == null) {
+			System.out.println("We don't have this make or model"); 
+		} else if (purchasedCar != null) {
+			System.out.println("We have this in stock. You can drive this off the lot!");
+		}
 	}
 
 }
