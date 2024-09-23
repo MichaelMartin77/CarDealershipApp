@@ -1,5 +1,7 @@
 package com.skilldistillery.dealership.entities;
 
+import java.util.ArrayList;
+
 public class CarLot {
 	// create an private field to hold the cars (10)
 	private Car[] cars = new Car[10];
@@ -81,5 +83,28 @@ public class CarLot {
 			return null;
 		}
 
+	}
+
+	public Car[] findMakeAndModelAndColor(String desiredMake, String desiredModel, String color) {
+		ArrayList<Car> matchingCars = new ArrayList<>(); 
+		
+		for (int i = 0; i < cars.length; i++) {
+			Car currentCar = cars[i]; 
+			
+			// checking if make model and color match
+			
+			if(currentCar != null && currentCar.getMake().equals(desiredMake) && currentCar.getModel().equals(desiredModel) && currentCar.getColor().equals(color)) {
+				matchingCars.add(currentCar); 
+			}
+		}
+		
+		// convert my arraylist to an array and return 
+		// so the complier won't yell at me 
+		
+		if(matchingCars.size() == 0) {
+			return new Car[0]; 
+		}
+		
+		return matchingCars.toArray(new Car[0]);
 	}
 }
